@@ -15,6 +15,16 @@
 <input type="submit" value="Login"><br>
 <a href="register.jsp">Register</a>
 
+	<%
+    String message = request.getParameter("message");
+    if (message != null) {
+%>
+    <div class="alert success">
+        <%= message %>
+    </div>
+<%
+    }
+%>
 </form>
 <footer>
     &copy; 2024 Your Blog Application

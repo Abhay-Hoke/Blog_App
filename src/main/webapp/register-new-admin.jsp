@@ -12,14 +12,14 @@
 <h2>Add New Admin Or Viewer</h2>
 
 <form action="RegisterServlet" method="post">
-	<label>Name: </label><input type="text" name="name" required><br>
-	<label>Email: </label><input type="email" name="email" required><br>
-	<label>Password: </label><input type="password" name="password" required><br>
+	<label>Name: </label><input type="text" name="name" required>
+	<label>Email: </label><input type="email" name="email" required>
+	<label>Password: </label><input type="password" name="password" required>
 	 <label>Role:</label>
     <select name="role">
         <option value="Admin">Admin</option>
         <option value="Viewer">Viewer</option>
-    </select><br>
+    </select>
     <input type="submit" value="Register">
 </form>
 <footer>

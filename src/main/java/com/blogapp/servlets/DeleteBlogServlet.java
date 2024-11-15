@@ -42,7 +42,7 @@ public class DeleteBlogServlet extends HttpServlet {
 			ps.setInt(1, blogId);
 			ps.executeUpdate();
 			
-			response.sendRedirect("admin-dashboard.jsp?success=BlogDeleted");
+			response.sendRedirect("admin-dashboard.jsp?success=Blog Deleted");
 	    	 
 		} catch (Exception e) {
 			e.printStackTrace();

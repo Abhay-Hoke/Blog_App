@@ -13,7 +13,7 @@
 <%@ include file="Header.jsp" %>
 <%
 HttpSession se = request.getSession(false);
-String role = (String) se.getAttribute("role");
+//String role = (String) se.getAttribute("role");
 
 if(se ==null){
 	response.sendRedirect("login.jsp?error=Unathorixed");

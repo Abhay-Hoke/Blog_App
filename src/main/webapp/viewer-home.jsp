@@ -13,7 +13,7 @@
 <%@ include file="Header.jsp" %>
 <%
 	HttpSession se = request.getSession(false);
-	String role = (String)se.getAttribute("role");
+	//String role = (String)se.getAttribute("role");
 	
 
 %>
@@ -22,7 +22,7 @@
 
 <form action="BlogServlet" method="get" class="search-form">
 <input type="hidden" name="action" value="search">
-<input type="text" name="query" placeholder="Search by title or date">
+<input type="text" name="query" placeholder="Search by title or date YYYY-MM-DD">
 <select name="type">
 <option name="title">Title</option>
 <option name="date">Date</option>

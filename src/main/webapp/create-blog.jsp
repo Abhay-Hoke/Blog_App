@@ -11,8 +11,12 @@
 
 <%
 	HttpSession se = request.getSession(false);//false causing problems
-	String role = (String) se.getAttribute("role");
-	if(se == null || !"Admin".equals(role)){
+	//String role = (String) se.getAttribute("role");
+	//if(se == null || !"Admin".equals(role)){
+		//response.sendRedirect("login.jsp?error=UnAuthorized");
+		//return;
+	//}
+	if(se == null || !"Admin".equals((String) se.getAttribute("role"))){
 		response.sendRedirect("login.jsp?error=UnAuthorized");
 		return;
 	}

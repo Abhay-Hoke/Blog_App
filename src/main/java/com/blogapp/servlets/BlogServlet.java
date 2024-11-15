@@ -40,24 +40,31 @@ public class BlogServlet extends HttpServlet {
 			String searchQuery = request.getParameter("query");
 			//System.out.println(searchQuery);
 			
+			
 			String searchType = request.getParameter("type");
-			//System.out.println(searchType);
+		//	System.out.println(searchType);
 			
 			try {
 				conn = DbUtils.connectDB();
 				
 				String sql =null;
 				if("Title".equals(searchType)) {
-					sql = "select * from blogs where title like ?";	
-				}else if("date".equals(searchType)) {
-					sql = "select * from blogs where created_at =?";
+					sql = "select * from blogs where title like ? order by id desc";	
+				}else if("Date".equals(searchType)) {
+					sql = "SELECT * FROM blogs WHERE DATE(created_at) =? order by id desc";
 				}
 				
 				if(sql!=null) {
 				
 				ps = conn.prepareStatement(sql);
 				
-				ps.setString(1,"%"+searchQuery+"%");
+				  if ("Date".equalsIgnoreCase(searchType)) {
+				        ps.setString(1, searchQuery); // For Date search
+				    } else if ("Title".equalsIgnoreCase(searchType)) {
+				        ps.setString(1, "%" + searchQuery + "%"); // For Title 
+				    }
+				
+				//ps.setString(1,"%"+searchQuery+"%");
 				rs = ps.executeQuery();
 				
 				request.setAttribute("blogs", rs);

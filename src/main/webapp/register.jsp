@@ -15,6 +15,7 @@
 	<label>Password:</label><input type="password" name="password" required><br>
 	
 	<input type="submit" value="Register">
+
 </form>
 <footer>
     &copy; 2024 Your Blog Application

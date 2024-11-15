@@ -19,8 +19,12 @@
 <a href="viewer-home.jsp">view blogs</a>|
 <%
 HttpSession sess = request.getSession(false);
+String role = (String) sess.getAttribute("role");
 if(sess !=null && sess.getAttribute("id")!= null){
 %>
+<%if("Admin".equals(role)){ %>
+<a href="admin-dashboard.jsp">Dash Board</a>|
+<%} %>
 
 <a href="LogoutServlet" >Logout</a>|
 <%
@@ -30,6 +34,7 @@ if(sess !=null && sess.getAttribute("id")!= null){
 <%
 }
 %>
+
 
 </nav>
 </div>

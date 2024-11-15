@@ -24,7 +24,7 @@ public class AdminDashboardServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		//System.out.println("Servlet called");
 
-		HttpSession session  = request.getSession(false);//false removed causing problems
+		HttpSession session  = request.getSession(false);
 		String role = (String)session.getAttribute("role");
 		if(session == null || !"Admin".equals(role)) {
 			response.sendRedirect("login.jsp?error=Unauthorized");
@@ -50,7 +50,7 @@ public class AdminDashboardServlet extends HttpServlet {
 		        	
 		        	 conn = DbUtils.connectDB();
 		        	 
-		            String sql = "select * FROM blogs";
+		            String sql = "select * FROM blogs order by id desc";
 		             ps = conn.prepareStatement(sql);
 		             rs = ps.executeQuery();
 

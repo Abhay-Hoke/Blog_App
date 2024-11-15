@@ -1,5 +1,19 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title></title>
+<link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+
+
 <%@ page import="java.util.List" %>
 <%@ include file="Header.jsp" %>
+
+
 
 <div class="container">
     <h1>Admin Dashboard</h1>
@@ -24,11 +38,15 @@
     %>
                 <div class="blog-item">
                     <h3><%= title %></h3>
+                    <div>
                     <p><strong>Date:</strong> <%= createdAt %></p>
-                    <a href="UpdateBlogServlet?id=<%= blogId %>" class="button">Edit</a>
+                    </div>
+                    <div>
+                    <a href="UpdateBlogServlet?id=<%= blogId %>" class="button edit-button">Edit</a>
                     
                     
                     <a href="DeleteBlogServlet?id=<%= blogId %>" class="button delete-button" onclick="return confirm('Are you sure you want to delete this blog?');">Delete</a>
+                </div>
                 </div>
     <%
             }
@@ -55,3 +73,4 @@
 <footer>
     &copy; 2024 Your Blog Application
 </footer>
+</body>
