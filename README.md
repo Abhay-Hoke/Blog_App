@@ -5,7 +5,7 @@ final static String DB_USER ="root";
 	final static String DB_URL = "jdbc:mysql://localhost:3306/"+DB_NAME;
 	final static String DRIVER_CLASS ="com.mysql.cj.jdbc.Driver";
 
-================================================================
+======================================================================================================================================================================================
 then 
 create a database practice_blogs
 create table
@@ -28,5 +28,8 @@ mysql> create table blogs (
 -> created_by int,
 -> foreign key (created_by) references users(id) on delete cascade
 -> );
-========================================================
+=============================================================================================================================================================================
+add following jar files
+![Screenshot 2024-11-18 031816](https://github.com/user-attachments/assets/478e4269-ae20-40cc-8fdf-42feb4d0b952)
+
 
