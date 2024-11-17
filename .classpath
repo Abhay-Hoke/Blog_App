@@ -8,30 +8,9 @@
 	<classpathentry kind="src" path="src/main/java"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
-	<classpathentry kind="lib" path="D:/eclipse_Advjava/mockito-core-5.14.2.jar">
-		<attributes>
-			<attribute name="module" value="true"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="D:/eclipse_Advjava/junit-jupiter-api-5.11.3.jar">
-		<attributes>
-			<attribute name="module" value="true"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="D:/eclipse_Advjava/junit-jupiter-engine-5.11.3.jar">
-		<attributes>
-			<attribute name="module" value="true"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="D:/eclipse_Advjava/junit-platform-commons-1.11.3.jar">
-		<attributes>
-			<attribute name="module" value="true"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="D:/eclipse_Advjava/junit-platform-launcher-1.11.3.jar">
-		<attributes>
-			<attribute name="module" value="true"/>
-		</attributes>
-	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
+	<classpathentry kind="lib" path="D:/eclipse_Advjava/mockito-core-5.14.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ABHAY/Downloads/byte-buddy-agent-1.15.10.jar"/>
+	<classpathentry kind="lib" path="D:/eclipse_Advjava/byte-buddy-1.15.10.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

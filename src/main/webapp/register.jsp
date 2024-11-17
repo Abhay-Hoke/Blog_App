@@ -15,7 +15,17 @@
 	<label>Password:</label><input type="password" name="password" required><br>
 	
 	<input type="submit" value="Register">
-
+ <%
+    String message = request.getParameter("message");
+    if (message != null) {
+%>
+    <div class="alert success">
+        <%= message %>
+    </div>
+<%
+    }
+%>
+</div>
 </form>
 <footer>
     &copy; 2024 Your Blog Application

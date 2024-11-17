@@ -32,6 +32,17 @@
     <input type="file" name="image"><br>
 
     <input type="submit" value="Update Blog">
+     <%
+    String message = request.getParameter("message");
+    if (message != null) {
+%>
+    <div class="alert success">
+        <%= message %>
+    </div>
+<%
+    }
+%>
+</div>
 </form>
 
 <a href="DeleteBlogServlet?id=<%= request.getAttribute("id") %>" class="delete-button">Delete Blog</a>

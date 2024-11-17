@@ -29,7 +29,21 @@
 	<label>Content: </label><textarea name="content" required></textarea><br>
 	<label>Image: </label><input type="file" name="image"><br>
 	<input type="submit" value="Create">
+	 <%
+    String message = request.getParameter("message");
+    if (message != null) {
+%>
+    <div class="alert success">
+        <%= message %>
+    </div>
+<%
+    }
+%>
+</div>
+	
 </form>
+
+
 
 <footer>
     &copy; 2024 Your Blog Application

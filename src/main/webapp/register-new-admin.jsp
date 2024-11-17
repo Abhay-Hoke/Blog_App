@@ -21,6 +21,18 @@
         <option value="Viewer">Viewer</option>
     </select>
     <input type="submit" value="Register">
+    
+     <%
+    String message = request.getParameter("message");
+    if (message != null) {
+%>
+    <div class="alert success">
+        <%= message %>
+    </div>
+<%
+    }
+%>
+</div>
 </form>
 <footer>
     &copy; 2024 Your Blog Application
