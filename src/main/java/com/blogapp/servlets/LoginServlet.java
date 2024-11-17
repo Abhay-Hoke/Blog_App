@@ -91,7 +91,7 @@ public class LoginServlet extends HttpServlet {
 			
 		}
 		
-		//doGet(request, response);
+		
 	}
 
 }

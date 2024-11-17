@@ -24,13 +24,9 @@ public class LogoutServlet extends HttpServlet {
 		}
 		response.sendRedirect("login.jsp");
 		
-		//response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
 	
-//	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-//		// TODO Auto-generated method stub
-//		//doGet(request, response);
-//	}
+
 
 }

@@ -41,8 +41,15 @@ public class BlogServlet extends HttpServlet {
 			//System.out.println(searchQuery);
 			
 			
+			
+			
 			String searchType = request.getParameter("type");
 		//	System.out.println(searchType);
+			
+			
+			//if date input is null change the type to title
+			if("Date".equals(searchType) && searchQuery=="") searchType="Title";
+			//System.out.println(searchType);
 			
 			try {
 				conn = DbUtils.connectDB();
@@ -51,7 +58,9 @@ public class BlogServlet extends HttpServlet {
 				if("Title".equals(searchType)) {
 					sql = "select * from blogs where title like ? order by id desc";	
 				}else if("Date".equals(searchType)) {
+					
 					sql = "SELECT * FROM blogs WHERE DATE(created_at) =? order by id desc";
+					
 				}
 				
 				if(sql!=null) {
@@ -59,7 +68,10 @@ public class BlogServlet extends HttpServlet {
 				ps = conn.prepareStatement(sql);
 				
 				  if ("Date".equalsIgnoreCase(searchType)) {
-				        ps.setString(1, searchQuery); // For Date search
+					  
+				        ps.setString(1, searchQuery);// For Date search
+					 
+						  
 				    } else if ("Title".equalsIgnoreCase(searchType)) {
 				        ps.setString(1, "%" + searchQuery + "%"); // For Title 
 				    }
